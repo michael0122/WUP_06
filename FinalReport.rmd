@@ -47,7 +47,7 @@ barchartGC(~race + cappun,data=GSS, type="percent")
 
 ```
 
-It appears that the black has the thus majority in opposing CAPPUN compared to other and the whites who are more in favor for .
+It appears that the black has the thus majority in opposing CAPPUN compared to other and the whites who are more in favor for the CAPPUN.
 
 ### Numerical Descriptive Results
 
