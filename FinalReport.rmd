@@ -56,7 +56,7 @@ rowPerc(table1)
 colPerc(table1)
 ```
 
-According to what the table presents there are only 11.70 black in favor of CAPPUN compared to 23.27 opposers, while the whites are 83.33 in favor of CAPPUN and that shows that there is a perceived difference between black and white. 
+According to what the table presents there are only 34.62 black in favor of CAPPUN others was 83.33 and the white is 68.66 in favor of CAPPUN and that shows that there is a perceived difference between black versus other and white. 
 
 ## Inferential Results
 
