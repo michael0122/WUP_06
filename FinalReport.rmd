@@ -9,13 +9,10 @@ output: html_document
 require(tidyverse)
 require(tigerstats)
 require(knitr)
-#GSS <-read.csv(file="GSScsv.csv",header=TRUE)
-
-```
-```{r}
-require(foreign)
-GSS <- read.dta(file="GSS2018.dta")
-GSS <- droplevels(GSS)
+GSS <-read.csv(file="GSScsv.csv",header=TRUE)
+library(dplyr)
+GSS <- GSS %>%
+mutate(across(where(is.character), as.factor))
 ```
 
 
@@ -42,8 +39,8 @@ If not, then whose view differs from whom??
 <!--Graphical results here.  Make sure to show your code.  Provide appropriate labels for axes, giving units if possible, and provide a good title for the graph, too.  Use the graphical results to describe the patterns if any that exist in the data as focused toward the research question. Bottom line is to explain the features of the graph that are relevant to conforming or departing to what is expected by your null hypothesis !-->
 
 ```{r}
-barchartGC(~race + cappun,data=GSS)
-barchartGC(~race + cappun,data=GSS, type="percent")
+barchartGC(~RACE + CAPPUN,data=GSS)
+barchartGC(~RACE + CAPPUN,data=GSS, type="percent")
 
 ```
 
@@ -54,7 +51,7 @@ It appears that the black has the thus majority in opposing CAPPUN compared to o
 <!--Numerical results go here. Use the numerical results to describe the patterns if any that exist in the data as focused toward the research question!-->
 
 ```{r}
-table1 <- xtabs(~race + cappun, data=GSS)
+table1 <- xtabs(~RACE + CAPPUN, data=GSS)
 rowPerc(table1)
 colPerc(table1)
 ```
@@ -138,7 +135,7 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 ```
 
 ```{r}
-fisherXY(GSS$cappun,GSS$race)
+fisherXY(GSS$CAPPUN,GSS$RACE)
 ```
 
 # Discussion and Conclusion
