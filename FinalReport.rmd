@@ -64,8 +64,10 @@ According to what the table presents there are only 34.62 black in favor of CAPP
 
 ```{r}
 chisq.test(table1)
+print("killroy was here")
 chisqtestGC(table1)
 ```
+
 
 ```{r}
 fisherXY = function(x, y, confL = 0, printAll=FALSE){
@@ -133,9 +135,8 @@ fisherXY = function(x, y, confL = 0, printAll=FALSE){
 }
 
 ```
-
 ```{r}
-fisherXY(GSS$CAPPUN,GSS$RACE)
+fisherXY(GSS$RACE,GSS$CAPPUN, confL = 0, printAll = TRUE)
 ```
 
 # Discussion and Conclusion
